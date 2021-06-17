@@ -6,10 +6,8 @@ export default class ApplicationAdapter extends RestAdapter {
   namespace = 'v1/public';
 
   urlForFindAll(modelName, snapshot) {
-    let ts = 1;
-    let hash = 'd203e7d6eeca70fd29711c6ff605f08d';
-    return `${super.urlForFindAll(modelName, snapshot)}?ts=${ts}&apikey=${
+    return `${super.urlForFindAll(modelName, snapshot)}?ts=${1}&apikey=${
       config.publicKey
-    }&hash=${hash}`;
+    }&hash=${config.hash}`;
   }
 }
