@@ -1,22 +1,14 @@
 {{page-title 'Characters'}}
 
-<h2>Characters</h2>
+<h1>Characters</h1>
 
 <div class='row'>
   {{#each @model as |character|}}
-    <div class='col-6 col-md-3 col-lg-2 mb-4'>
-      <div class='card h-100'>
-        <img
-          src={{character.thumbnailLink}}
-          class='card-img-top'
-          alt={{character.name}}
-        />
-
-        <div class='card-body'>
-          <h3 class='card-title h5'>{{character.name}}</h3>
-        </div>
-      </div>
-    </div>
+    <Card
+      @heading={{character.name}}
+      @thumbnailLink={{character.thumbnailLink}}
+      @altTag={{character.name}}
+    />
   {{/each}}
 </div>
 
