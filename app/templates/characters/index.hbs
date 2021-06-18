@@ -1,8 +1,11 @@
 {{page-title 'Characters'}}
 
+<h1>Characters</h1>
+
 <div class='row'>
   {{#each @model as |character|}}
     <Card
+      @modelId={{character.id}}
       @heading={{character.name}}
       @thumbnailLink={{character.thumbnailLink}}
       @altTag={{character.name}}

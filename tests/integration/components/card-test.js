@@ -13,14 +13,5 @@ module('Integration | Component | card', function (hooks) {
     await render(hbs`<Card />`);
 
     assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      <Card>
-        template block text
-      </Card>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
   });
 });

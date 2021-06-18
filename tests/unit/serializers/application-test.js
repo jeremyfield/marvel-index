@@ -10,7 +10,11 @@ module('Unit | Serializer | application', function (hooks) {
     let serializer = store.serializerFor('application');
 
     assert.deepEqual(
-      serializer.createRestPayload('character', { data: { results: ['a'] } }),
+      serializer.createRestPayload(
+        'character',
+        { data: { results: ['a'] } },
+        true
+      ),
       { characters: ['a'] }
     );
   });

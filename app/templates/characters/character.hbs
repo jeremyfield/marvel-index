@@ -1,2 +1,9 @@
-{{page-title "Character"}}
+{{page-title @model.name}}
+
+<h1>{{@model.name}}</h1>
+
+<img src={{@model.thumbnailLink}} alt={{@model.name}} />
+
+<p>{{@model.description}}</p>
+
 {{outlet}}
