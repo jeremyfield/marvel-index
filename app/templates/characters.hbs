@@ -2,14 +2,4 @@
 
 <h1>Characters</h1>
 
-<div class='row'>
-  {{#each @model as |character|}}
-    <Card
-      @heading={{character.name}}
-      @thumbnailLink={{character.thumbnailLink}}
-      @altTag={{character.name}}
-    />
-  {{/each}}
-</div>
-
 {{outlet}}
