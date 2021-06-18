@@ -1,0 +1,15 @@
+<h1>Comics</h1>
+
+<div class='row'>
+  {{#each @model as |comic|}}
+    <Card
+      @route={{'comics.comic'}}
+      @modelId={{comic.id}}
+      @heading={{comic.title}}
+      @thumbnailLink={{comic.thumbnailLink}}
+      @altTag={{comic.title}}
+    />
+  {{/each}}
+</div>
+
+{{outlet}}

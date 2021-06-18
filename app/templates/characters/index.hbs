@@ -3,6 +3,7 @@
 <div class='row'>
   {{#each @model as |character|}}
     <Card
+      @route={{'characters.character'}}
       @modelId={{character.id}}
       @heading={{character.name}}
       @thumbnailLink={{character.thumbnailLink}}

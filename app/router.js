@@ -10,5 +10,7 @@ Router.map(function () {
   this.route('characters', function () {
     this.route('character', { path: '/:character_id' });
   });
-  this.route('comics');
+  this.route('comics', function () {
+    this.route('comic', { path: '/:comic_id' });
+  });
 });
