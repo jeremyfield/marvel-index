@@ -5,9 +5,4 @@ export default class CharacterModel extends Model {
   @attr description;
   @attr thumbnail;
   @attr urls;
-
-  get thumbnailLink() {
-    const { path, extension } = this.thumbnail;
-    return `${path}/standard_large.${extension}`;
-  }
 }

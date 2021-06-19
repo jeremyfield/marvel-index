@@ -1,6 +1,10 @@
 <div class='col-6 col-md-3 mb-4'>
   <LinkTo @route={{@route}} @model={{@modelId}} class='card h-100'>
-    <img src={{@thumbnailLink}} class='card-img-top' alt={{@altTag}} />
+    <img
+      src={{thumbnail-link @thumbnail}}
+      class='card-img-top'
+      alt={{@altTag}}
+    />
 
     <div class='card-body'>
       <h2 class='card-title h5'>{{@heading}}</h2>

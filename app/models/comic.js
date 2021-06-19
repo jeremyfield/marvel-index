@@ -6,9 +6,4 @@ export default class ComicModel extends Model {
   @attr pageCount;
   @attr thumbnail;
   @attr urls;
-
-  get thumbnailLink() {
-    const { path, extension } = this.thumbnail;
-    return `${path}/standard_large.${extension}`;
-  }
 }
