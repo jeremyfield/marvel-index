@@ -18,4 +18,13 @@ export default class ApplicationAdapter extends RestAdapter {
       this.queryParams
     }`;
   }
+
+  urlForQuery(query, modelName) {
+    query.ts = 1;
+    query.apikey = config.publicKey;
+    query.hash = config.hash;
+    query.offset = (query.page - 1) * query.limit;
+    delete query.page;
+    return super.urlForQuery(query, modelName);
+  }
 }

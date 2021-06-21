@@ -12,10 +12,10 @@ module('Unit | Serializer | application', function (hooks) {
     assert.deepEqual(
       serializer.createRestPayload(
         'character',
-        { data: { results: ['a'] } },
+        { data: { results: ['a'], total: 1493, limit: 20 } },
         true
       ),
-      { characters: ['a'] }
+      { characters: ['a'], meta: { total_pages: 75 } }
     );
   });
 });
