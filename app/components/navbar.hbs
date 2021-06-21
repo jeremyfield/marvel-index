@@ -1,6 +1,18 @@
-<nav>
-  <ul>
-    <li><LinkTo @route='characters'>Characters</LinkTo></li>
-    <li><LinkTo @route='comics'>Comics</LinkTo></li>
-  </ul>
-</nav>
+<BsNavbar @type='dark' @backgroundColor='dark' as |navbar|>
+  <div class='container'>
+    <div class='navbar-header'>
+      {{navbar.toggle}}
+      <LinkTo @route='index' class='navbar-brand'>Marvel Index</LinkTo>
+    </div>
+    <navbar.content>
+      <navbar.nav as |nav|>
+        <nav.item>
+          <nav.linkTo @route='characters'>Characters</nav.linkTo>
+        </nav.item>
+        <nav.item>
+          <nav.linkTo @route='comics'>Comics</nav.linkTo>
+        </nav.item>
+      </navbar.nav>
+    </navbar.content>
+  </div>
+</BsNavbar>
