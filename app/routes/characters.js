@@ -4,10 +4,11 @@ import { inject as service } from '@ember/service';
 export default class CharactersRoute extends Route {
   @service infinity;
 
-  model() {
-    return this.infinity.model('character', {
-      perPageParam: 'limit',
-      perPage: 24,
-    });
+  model({ nameStartsWith }) {
+    let queryParams = { perPageParam: 'limit', perPage: 24 };
+    if (nameStartsWith) {
+      queryParams.nameStartsWith = nameStartsWith;
+    }
+    return this.infinity.model('character', queryParams);
   }
 }
