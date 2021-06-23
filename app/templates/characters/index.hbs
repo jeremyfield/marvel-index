@@ -15,7 +15,9 @@
 </div>
 
 <InfinityLoader @infinityModel={{model}}>
-  <Loader />
+  {{#unless @model.reachedInfinity}}
+    <Loader />
+  {{/unless}}
 </InfinityLoader>
 
 {{outlet}}
