@@ -5,6 +5,7 @@
     class='form-control'
     id='character-search'
     name='q'
+    value={{@value}}
     {{on 'input' (perform @task value='target.value')}}
   />
 </div>
