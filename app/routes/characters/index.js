@@ -19,4 +19,10 @@ export default class CharactersIndexRoute extends Route {
       return this.modelFor('characters');
     }
   }
+
+  resetController(controller, isExiting) {
+    if (isExiting) {
+      controller.nameStartsWith = null;
+    }
+  }
 }
