@@ -14,7 +14,7 @@
   {{/each}}
 </div>
 
-<InfinityLoader @infinityModel={{model}}>
+<InfinityLoader @infinityModel={{@model}}>
   {{#unless @model.reachedInfinity}}
     <Loader />
   {{/unless}}

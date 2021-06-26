@@ -1,12 +1,12 @@
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
 
-module('Unit | Controller | characters', function (hooks) {
+module('Unit | Controller | characters/index', function (hooks) {
   setupTest(hooks);
 
   // TODO: Replace this with your real tests.
   test('it exists', function (assert) {
-    let controller = this.owner.lookup('controller:characters');
+    let controller = this.owner.lookup('controller:characters/index');
     assert.ok(controller);
   });
 });
