@@ -1,6 +1,6 @@
 import { helper } from '@ember/component/helper';
 
-export default helper(function thumbnailLink([thumbnail]) {
+export default helper(function thumbnailLink([thumbnail, size]) {
   let { path, extension } = thumbnail;
-  return `${path}/standard_large.${extension}`;
+  return `${path}/${size ? size : 'standard_large'}.${extension}`;
 });
