@@ -1,6 +1,6 @@
 <h1>Characters</h1>
 
-<NameSearch />
+<NameSearch @task={{this.filterCharacters}} />
 
 <div class='row'>
   {{#each @model as |character|}}

@@ -4,6 +4,12 @@ import { inject as service } from '@ember/service';
 export default class CharactersIndexRoute extends Route {
   @service infinity;
 
+  queryParams = {
+    nameStartsWith: {
+      refreshModel: true,
+    },
+  };
+
   model({ nameStartsWith }) {
     if (nameStartsWith) {
       let queryParams = { perPageParam: 'limit', perPage: 24 };
